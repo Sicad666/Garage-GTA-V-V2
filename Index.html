@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garage en Auto Overzicht</title>
+    <style>
+        body {
+            background-color: beige;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .search-container, .add-container {
+            margin-bottom: 20px;
+        }
+        .search-container input, .add-container input, .add-container select {
+            padding: 10px;
+            margin-right: 10px;
+        }
+        .search-container input {
+            width: 300px;
+        }
+        .add-container button, .search-container button {
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .add-container button:hover, .search-container button:hover {
+            background-color: darkgray;
+        }
+        .garage-list {
+            margin-top: 20px;
+        }
+        .garage {
+            margin-bottom: 20px;
+        }
+        .garage h3 {
+            margin-bottom: 5px;
+        }
+        .garage ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+        .garage ul li {
+            margin: 3px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Zoek naar een auto..." oninput="searchVehicles()">
+    </div>
+    <div class="add-container">
+        <input type="text" id="newVehicle" placeholder="Naam van de auto">
+        <select id="garageSelect"></select>
+        <button onclick="addVehicle()">Add Vehicle</button>
+    </div>
+    <div class="garage-list" id="garageList"></div>
+
+    <script src="garage-overzicht.js"></script>
+</body>
+</html>
